@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- 一般写VUE项目，最外层要放一个ID选择器 -->
+    <div class="" id="app">
+        <!-- {{message}}
+        <p class="coll">钟俊浩大帅比</p>
+        <p class="good" v-bind:class="{{coll:isGood}}">天气真好</p>
+        <p class="good" v-bind:class="isGood?'cool':'notcool'">天气真好</p>
+        <p class="cool" v-bind:class="[activeClass]">天气真好</p> -->
+        <!-- <ul>
+             <li v-for="a in todos">{{a.text}}</li>a 相当于微信小程序的item
+        </ul> -->
+        <p class="coll" v-on:click="reveseMsg">{{msg}}</p>
+        <!-- <p>{{content}}</p>
+        <input type="text" v-model="content"> -->
+    </div>
+    <script>
+    var app = new Vue({
+        el:'#app',
+        data:{
+            // message:'hello world',
+            // isGood:true,
+            // activeClass:'active',
+            // todos:[
+            //     {text:'学习VUE'},
+            //     {text:'学习JS'},
+            //     {text:'写项目'},
+            // ]
+            msg:'钟俊浩大帅比',
+            content: ''
+        },
+        methods:{
+            reveseMsg(){
+                this.msg = this.msg.split('').reverse().join('')
+            }
+        }
+    })
+    </script>
+</body>
+</html>
