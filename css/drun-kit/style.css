@@ -1,0 +1,54 @@
+html{
+    font-size: 10px;
+    /* 设置背景的位置 */
+    background: url(http://i.imgur.com/b9r5sEL.jpg) bottom center;
+    /* 减去比元素大的部分  让图片自适应元素的大小（图片自动缩放）*/
+    background-size: cover;
+
+}
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.keys{
+    /* 弹性布局 */
+    display: flex;
+    /*等比例分布*/
+    flex: 1;
+    /* 让元素在主轴方向上居中 横坐标*/
+    justify-content: center;
+    /* 让元素在纵轴上居中 纵坐标 */
+    align-items: center;
+    /* 默认整个屏幕高度就是100VH, */
+    /* 所有设备的高度和宽度都是100vh，就是分为100份 */
+    height: 100vh;
+    /* background-color: red; */
+}
+.key {
+    border: .4rem solid #000;
+    border-radius: .5rem;
+    margin: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem .5rem;
+    width: 10rem;
+    /* flex: 1; */
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, .4);
+    text-shadow: 0 0 .5rem black;
+}
+.key div{
+    font-size: 4rem;
+}
+.sound{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc600;
+}
+.playing{
+    transform: scale(1.1);
+    border-color: #ffc600;
+    box-shadow: 0 0 1rem #ffc600;
+}
