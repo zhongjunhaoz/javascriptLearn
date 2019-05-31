@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    /* font-size: 15px; */
+}
+.page{
+    width: 100%;
+    padding: 15px;/*往内挤压15个像素*/
+    box-sizing: border-box;
+}
+.page-header{
+    width: 100%;
+}
+.page-header_pic{
+    width: 100%;
+    height: 200px;
+    background: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1069703687,764517429&fm=26&gp=0.jpg) no-repeat;
+    background-size: cover;
+    margin-bottom: 7px;
+}
+.name{
+    padding-left: 10px;
+    font-size: 20px;
+}
+.sex{
+    position: relative;
+}
+img{
+    position: absolute;
+    top: 0;left: 0;right: 0;bottom: 0;
+    margin: auto;
+}
+.labels{
+    display:block;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.label{
+    font-size: 15px;
+    padding: 5px;
+    /* margin-top: 10px; */
+    border-radius: 3px;
+}
+.blue{
+    background-color: rgb(95, 95, 233);
+    margin-right: 3px;
+}
+.green{
+    background-color: rgb(44, 236, 98);
+    margin-right: 3px;
+}
+.orange{
+    background-color: rgb(240, 117, 56);
+}
+ui li{
+    margin: 5px;
+    display: inline-block;
+    list-style:none;
+    /* margin-top: 30px; */
+    width: 140px;
+    letter-spacing: 1px;
+    color: rgb(173, 165, 165);
+    padding-left: 20px;
+}
+.page-header_userinfo{
+    position: relative;
+}
+.ewm .ewm01{
+    top: 90px;
+    right: -300px;
+}
+.ewm .ewm02{
+    top:-74px;
+    right: -300px;
+}
+.page-header{
+    border: 1px solid #dddada;
+    border-radius: 3px;
+}
