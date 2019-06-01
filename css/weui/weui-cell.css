@@ -1,0 +1,45 @@
+.weui-cells{
+    font-size: 17px;
+    line-height: 1.47058824;
+    background-color: #ffffff;
+    overflow: hidden;/*子元素超出就隐藏*/
+    position: relative;/*告诉别人相对于它来定位*/
+    margin-top: 1.17647059em;
+}
+/* 为什么要用伪元素，不用border-top?border_bottom? 因为伪元素不会改变盒子的大小，不会干预盒子
+盒子模型的一部分*/
+
+.weui-cells::before{
+    /*不影响父元素的盒子模型*/
+    content: "";/*必须要写的*/
+    /* 定位会让元素离开文档流 */
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 10px;
+    border-top: 10px solid #e5e5e5;
+    /* background-color:red; */
+    transform: scaleY(.5);
+    transform-origin: 0 0;
+}
+.weui-cells::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    border-bottom: 1px solid #e5e5e5;
+    transform: scaleY(0.5);
+    transform-origin:0 100%;
+}
+.weui-cell{
+    padding: 10px 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.weui-cell_bd{
+    flex:1;
+}
