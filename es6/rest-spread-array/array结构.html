@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array</title>
+</head>
+<body>
+    <script>
+    const lists = [
+        {name:'李磊'},
+        {age:32},
+        [{school:'ecut'}]
+    ];
+        //目的，输出lists里面的值
+
+    //es5写法
+    var nameobj = lists[0];
+    var ageobj = lists[1];
+
+    const [a,b] = lists;  //es6新的写法，拿到数组对象里面的内容
+    const [,,c,e] = lists;  //直接拿里面其中一个,如果是一个不存在的值，undefind
+
+    const [,,f] = lists;  //返回一个数组，数组里面嵌套了一个school
+    const [,,[f]] = lists;//返回school的值
+    </script>
+</body>
+</html>
