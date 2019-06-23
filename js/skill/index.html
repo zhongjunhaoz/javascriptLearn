@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>URL</title>
+</head>
+<body>
+    <a href="?name=lilei&sex=female">
+       韩梅梅
+    </a>
+    <script>
+    const search = localtion.Search;
+    console.log(search);
+    if(search){
+        const paramsObj = new URLSearchParams(search);
+        console.log(paramsObj);
+        console.log(paramsObj.get('name'));
+    }
+    function getQueryString(){
+        let obj = {};
+        const search = location.search.substr(1);
+        const searchAll = search.split('&');
+        console.log(searchAll);
+        searchAll.forEach(item=>{
+            const ret = item.split('=');
+            obj[ret[0]] = ret[0];
+        })
+        return {
+            name:'lilei',
+            sex:'female'
+        }
+    }
+
+    </script>
+</body>
+</html>
