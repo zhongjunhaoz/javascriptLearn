@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // function add(a){
+    //     return function(b){
+    //         return function(c){
+    //             return a+b+c;
+    //         }
+    //     }
+    // }
+    // add(1,2,3)
+    // function mulit(a){
+    //     return function(b){
+    //         return function(c){
+    //             return a*b*c
+    //         }
+    //     }
+    // }
+    // mulit(2)(3)(4)
+    // console.log(mulit(2)(3)(4))
+    function curry(fn){
+        var args = Array.prototype.slice.call(arguments,1)
+        return function(){
+            var newArgs = args.concat(Array.prototype.slice.call(arguments))
+            return fn.apply(this,newArgs)//相当于this作用域指到newArgs里面
+        }
+    }
+    function multiFn(a,b,c){
+        return a*b*c
+    }
+    var mulit = curry(mulitFn)
+    console.log(mulit(2,3,4))
+    </script>
+</body>
+</html>
