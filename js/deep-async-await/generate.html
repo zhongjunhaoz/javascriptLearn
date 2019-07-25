@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function* test() {
+        let a = yield 1;
+        console.log(a);
+        let b =  yield 2;
+        console.log(b);
+        let c =  yield 3;
+        console.log(c);
+        }
+        // 惰性的
+       var g = test();
+        // 生成一个对象 { next }
+        // 调用 next 一步一步执行
+        // g.next()
+        // g.next()
+        // g.next()
+    </script>
+</body>
+</html>
